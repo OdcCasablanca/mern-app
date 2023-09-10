@@ -1,0 +1,25 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./server # Path to your backend code
+    container_name: mern-crud-backend
+    ports:
+      - "8081:8081"
+    environment:
+      - MONGODB_URI=mongodb://host.docker.internal:27017/MERN
+    networks:
+      - mern-crud-network
+  frontend:
+    build:
+      context: ./client # Path to your frontend code
+    container_name: mern-crud-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - mern-crud-network
+
+networks:
+  mern-crud-network:
