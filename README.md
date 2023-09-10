@@ -107,8 +107,6 @@ cd server
 Cruds
 ```
 
-## Support
 
-For any additional information please refer to [Henok R. Bedassa](https://henok.us).
 
 **Thank you**
