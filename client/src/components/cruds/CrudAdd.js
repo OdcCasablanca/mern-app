@@ -71,7 +71,6 @@ function CrudAdd(props) {
 					<input
 						name="email"
 						type="email"
-						pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"
 						required
 						value={crud.email}
 						onChange={handleChange}
